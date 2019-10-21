@@ -1,11 +1,13 @@
 const readlineSync = require("readline-sync");
 
+const converstionFactorInMmSquared = 645.16;
 const width = readlineSync.question("Width: ");
 const length = readlineSync.question("Length: ");
 const areaInches = (width * length);
-const areaMillimeters = areaInches * 25.4 * 25.4;
+const areaMillimeters = areaInches * converstionFactorInMmSquared;
+let area = areaMillimeters.toFixed(2);
+area = area.toLocaleString();
 
+console.log("A(n) " + width + "-by-" + length + "-inch sheet of paper has an area of " + area + " square millimeter(s).");
 
-console.log("A(n) " + width + "-by-" + length + "-inch sheet of paper has an area of " + areaMillimeters + " square millimeter(s).");
-
-//add: round the result to two decimals, format it with separating commas
+//commas still don't work
