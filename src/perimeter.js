@@ -5,8 +5,7 @@ const width = readlineSync.question("Width: ");
 const length = readlineSync.question("Length: ");
 const perimeterInches = 2 * width + 2 * length;
 const perimeterCentimeters = perimeterInches * converstionFactorInCm;
-let perimeter = perimeterCentimeters.toFixed(2);
-perimeter = perimeter.toLocaleString();
+let perimeter = perimeterCentimeters.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 console.log("A(n) " + width + "-by-" + length + "-inch sheet of paper has a perimeter of " + perimeter + " centimeter(s).");
 
