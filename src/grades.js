@@ -5,26 +5,39 @@ const quizPercentage = 0.35;
 const testPercentage = 0.5;
 
 
-console.log("Enter three homework grades. ");
-const homeworkGrade1 = readlineSync.question("");
-const homeworkGrade2 = readlineSync.question("");
-const homeworkGrade3 = readlineSync.question("");
+console.log("\nEnter three homework grades. ");
+let homeworkGrade1 = readlineSync.question("");
+let homeworkGrade2 = readlineSync.question("");
+let homeworkGrade3 = readlineSync.question("");
+
+homeworkGrade1 = parseFloat(homeworkGrade1);
+homeworkGrade2 = parseFloat(homeworkGrade2);
+homeworkGrade3 = parseFloat(homeworkGrade3);
 
 
-console.log("Enter three quiz grades. ");
-const quizGrade1 = readlineSync.question("");
-const quizGrade2 = readlineSync.question("");
-const quizGrade3 = readlineSync.question("");
+console.log("\nEnter three quiz grades. ");
+let quizGrade1 = readlineSync.question("");
+let quizGrade2 = readlineSync.question("");
+let quizGrade3 = readlineSync.question("");
 
+quizGrade1 = parseFloat(quizGrade1);
+quizGrade2 = parseFloat(quizGrade2);
+quizGrade3 = parseFloat(quizGrade3);
 
-console.log("Enter three test grades. ");
-const testGrade1 = readlineSync.question("");
-const testGrade2 = readlineSync.question("");
-const testGrade3 = readlineSync.question("");
+console.log("\nEnter three test grades. ");
+let testGrade1 = readlineSync.question("");
+let testGrade2 = readlineSync.question("");
+let testGrade3 = readlineSync.question("");
 
-const homeworkGradeOverall = (homeworkGrade1 + homeworkGrade2 + homeworkGrade3)/3;
-const quizGradeOverall = (quizGrade1 + quizGrade2 + quizGrade3)/3;
-const testGradeOverall = (testGrade1 + testGrade2 + testGrade3)/3;
-const gradeOverall = (homeworkPercentage * homeworkGradeOverall) + (quizPercentage * quizGradeOverall) + (testPercentage * testGradeOverall);
+testGrade1 = parseFloat(testGrade1);
+testGrade2 = parseFloat(testGrade2);
+testGrade3 = parseFloat(testGrade3);
 
-console.log("Your marking period grade is " + gradeOverall + "%.");
+const homeworkAverage = (homeworkGrade1 + homeworkGrade2 + homeworkGrade3)/3;
+const quizAverage = (quizGrade1 + quizGrade2 + quizGrade3)/3;
+const testAverage = (testGrade1 + testGrade2 + testGrade3)/3;
+
+let gradeOverall = (homeworkPercentage * homeworkAverage) +  (quizPercentage * quizAverage) + (testPercentage * testAverage);
+gradeOverall = gradeOverall.toFixed(2);
+
+console.log("\nYour marking period grade is " + gradeOverall + "%.");
