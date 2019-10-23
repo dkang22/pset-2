@@ -8,5 +8,3 @@ const perimeterCentimeters = perimeterInches * converstionFactorInCm;
 let perimeter = perimeterCentimeters.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 console.log("A(n) " + width + "-by-" + length + "-inch sheet of paper has a perimeter of " + perimeter + " centimeter(s).");
-
-//commas still don't work
