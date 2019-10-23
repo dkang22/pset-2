@@ -11,4 +11,4 @@ areaMillimeters = areaMillimeteres.toLocaleString();
 
 console.log("A(n) " + width + "-by-" + length + "-inch sheet of paper has an area of " + areaMillimeters + " square millimeter(s).");
 
-//commas still don't work
+//commas still don't wor
