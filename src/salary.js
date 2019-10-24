@@ -10,3 +10,6 @@ const annualSalary = parseFloat(readlineSync.question("\nAnnual salary: "));
 
 const salaryAfter401k= parseFloat(annualSalary * four01kContribution);
 const annualSalaryAfterDeductions = salaryAfter401k * ()
+
+
+//find out how to actually format the different taxes

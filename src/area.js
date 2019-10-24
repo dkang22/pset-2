@@ -6,7 +6,7 @@ const width = readlineSync.question("\nWidth: ");
 const length = readlineSync.question("Length: ");
 
 const areaInches = (width * length);
-const areaMillimeters = areaInches * converstionFactorInMmSquared;
-const area = areaMillimeters.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2 });
+let areaMillimeters = areaInches * converstionFactorInMmSquared;
+areaMillimeters = areaMillimeters.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
-console.log("\nA(n) " + width + "-by-" + length + "-inch sheet of paper has an area of " + area + " square millimeter(s).");
+console.log("\nA(n) " + width + "-by-" + length + "-inch sheet of paper has an area of " + areaMillimeters + " square millimeter(s).");
