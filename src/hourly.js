@@ -1,6 +1,6 @@
 const readlineSync = require("readline-sync");
 
-const hourlyWage = parseFloat(readlineSync.question("\nHourly Wage: "));
+const hourlyWage = parseFloat(readlineSync.question("\nHourly wage: "));
 
 let hoursTotal = 0;
 hoursTotal += parseFloat(readlineSync.question("\nMonday: "));
