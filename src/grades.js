@@ -1,8 +1,8 @@
 const readlineSync = require("readline-sync");
 
-const homeworkPercentage = 0.15;
-const quizPercentage = 0.35;
-const testPercentage = 0.5;
+const homeworkWeight = 0.15;
+const quizWeight = 0.35;
+const testWeight = 0.5;
 
 
 console.log("\nEnter three homework grades. ");
@@ -30,7 +30,7 @@ const homeworkAverage = homeworkTotal/3;
 const quizAverage = quizTotal/3;
 const testAverage = testTotal/3;
 
-let gradeOverall = (homeworkPercentage * homeworkAverage) +  (quizPercentage * quizAverage) + (testPercentage * testAverage);
+let gradeOverall = (homeworkWeight * homeworkAverage) +  (quizWeight * quizAverage) + (testWeight * testAverage);
 gradeOverall = gradeOverall.toFixed(2);
 
 console.log("\nYour marking period grade is " + gradeOverall + "%.");
