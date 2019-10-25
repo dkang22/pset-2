@@ -9,7 +9,12 @@ const medicare = 0.0145;
 const annualSalary = parseFloat(readlineSync.question("\nAnnual salary: "));
 
 const salaryAfter401k= parseFloat(annualSalary * four01kContribution);
-const annualSalaryAfterDeductions = salaryAfter401k * ()
+let annualSalaryAfterDeductions = salaryAfter401k * (federalIncome + stateIncome + socialSecurity + medicare)
+annualSalaryAfterDeductions = annualSalaryAfterDeductions.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2 });
+
+const bimontlySalary = annualSalaryAfterDeductions/24;
+
+console.log("\nYour take-home pay each check will be $" + bimontlySalary + ".");
 
 
 //find out how to actually format the different taxes
