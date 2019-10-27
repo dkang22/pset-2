@@ -10,7 +10,7 @@ const annualSalary = Number(readlineSync.question("\nAnnual salary: "));
 
 const salaryAfter401k = Number(annualSalary * FOUR_O_ONE_K_CONTRIBUTION);
 const annualSalaryAfterDeductions = Number(salaryAfter401k - (salaryAfter401k * (FEDERAL_INCOME + STATE_INCOME + SOCIAL_SECURITY + MEDICARE)));
-let bimontlySalary = parseFloat(annualSalaryAfterDeductions/24);
+let bimontlySalary = Number(annualSalaryAfterDeductions/24);
 bimontlySalary = bimontlySalary.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2 });
 
 
