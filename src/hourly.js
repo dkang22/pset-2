@@ -1,15 +1,15 @@
 const readlineSync = require("readline-sync");
 
-const hourlyWage = parseFloat(readlineSync.question("\nHourly wage: "));
+const hourlyWage = Number(readlineSync.question("\nHourly wage: "));
 
 let hoursTotal = 0;
-hoursTotal += parseFloat(readlineSync.question("\nMonday: "));
-hoursTotal += parseFloat(readlineSync.question("Tuesday: "));
-hoursTotal += parseFloat(readlineSync.question("Wednesday: "));
-hoursTotal += parseFloat(readlineSync.question("Thursday: "));
-hoursTotal += parseFloat(readlineSync.question("Friday: "));
-hoursTotal += parseFloat(readlineSync.question("Saturday: "));
-hoursTotal += parseFloat(readlineSync.question("Sunday: "));
+hoursTotal += Number(readlineSync.question("\nMonday: "));
+hoursTotal += Number(readlineSync.question("Tuesday: "));
+hoursTotal += Number(readlineSync.question("Wednesday: "));
+hoursTotal += Number(readlineSync.question("Thursday: "));
+hoursTotal += Number(readlineSync.question("Friday: "));
+hoursTotal += Number(readlineSync.question("Saturday: "));
+hoursTotal += Number(readlineSync.question("Sunday: "));
 
 let weeklyEarnings = hourlyWage * hoursTotal;
 weeklyEarnings = weeklyEarnings.toLocaleString("en", {minimumFractionDigits: 2, maximumFractionDigits: 2 });

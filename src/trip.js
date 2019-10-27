@@ -1,12 +1,12 @@
 const readlineSync = require("readline-sync");
 
-const studentNum = parseInt(readlineSync.question("\nStudents: "));
-const teacherNum = parseInt(readlineSync.question("Teachers: "));
-const busCapacity = parseInt(readlineSync.question("Bus capacity: "));
+const studentNum = Number(readlineSync.question("\nStudents: "));
+const teacherNum = Number(readlineSync.question("Teachers: "));
+const busCapacity = Number(readlineSync.question("Bus capacity: "));
 
-const totalPeople = parseInt(studentNum + teacherNum);
+const totalPeople = Number(studentNum + teacherNum);
 const busNum = Math.ceil(totalPeople/busCapacity);
-let passengersLastBus = parseFloat(totalPeople % busCapacity);
+let passengersLastBus = Number(totalPeople % busCapacity);
 passengersLastBus = passengersLastBus.toLocaleString("en", {minimumFractionDigits: 0, maximumFractionDigits: 0 });
 
 
